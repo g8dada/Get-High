@@ -13,6 +13,12 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             FindObjectOfType<GameManager>().EndGame();
         }
+
+        if (collisionInfo.collider.tag == "Coke")
+        {
+            movement.enabled = false;
+            FindObjectOfType<GameManager>().LevelComplete();
+        }
     }
     // Start is called before the first frame update
     void Start()

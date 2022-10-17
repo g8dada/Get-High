@@ -23,5 +23,9 @@ public class Score : MonoBehaviour
         {
             scoreText.text = "Game Over";
         }
+        if (gameManager.levelCompleted == true)
+        {
+            scoreText.text = "GET HIGHHHHHH";
+        }
     }
 }
