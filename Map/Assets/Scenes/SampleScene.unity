@@ -3998,6 +3998,7 @@ MonoBehaviour:
   controller: {fileID: 1379857258}
   freelook: {fileID: 1216689479}
   thirdPersonMovement: {fileID: 1379857259}
+  pressKeyOpenDoor: {fileID: 0}
 --- !u!1 &1281884053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8321235024012218410, guid: 214b673e61a328f4b97a4c1f1bba63d3, type: 3}
@@ -4103,7 +4104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313070386}
-  m_LocalRotation: {x: 0.11060921, y: 0.000000007404864, z: -8.2410284e-10, w: 0.993864}
+  m_LocalRotation: {x: 0.11060922, y: -8.8272856e-16, z: -1.2781585e-17, w: 0.993864}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4387,6 +4388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1379857258}
   turnCamera: {fileID: 1216689481}
+  freelook: {fileID: 1216689479}
   cam: {fileID: 963194228}
   speed: 10
   turnSmoothTime: 0.1
@@ -4516,6 +4518,7 @@ MonoBehaviour:
   controller: {fileID: 1379857258}
   freelook: {fileID: 1216689479}
   thirdPersonMovement: {fileID: 1379857259}
+  pressKeyOpenDoor: {fileID: 0}
 --- !u!114 &1379857269
 MonoBehaviour:
   m_ObjectHideFlags: 0

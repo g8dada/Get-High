@@ -38,19 +38,13 @@ public class PressKeyOpenDoor : MonoBehaviour {
         if (Input.GetKeyDown("space") && Action == true)
         {
             Action = false;
+
             if (oddTimeOpenDoor == false && AnimeObject.tag == "Spinning Tag")
             {
                 controller.enabled = false;
-                oddTimeOpenDoor = !oddTimeOpenDoor;
-            }
-            
-
-            if (AnimeObject.tag == "Spinning Tag")
-            {
-                controller.enabled = false;
             }
 
-
+            oddTimeOpenDoor = !oddTimeOpenDoor;
 
             StartCoroutine(OpenDoor());
         }

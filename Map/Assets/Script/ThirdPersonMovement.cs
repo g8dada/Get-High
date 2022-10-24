@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
     public CharacterController controller;
     public TurnCamera turnCamera;
+    public CinemachineFreeLook freelook;
     public Transform cam;
 
     public float speed = 6.0f;
@@ -45,8 +47,19 @@ public class ThirdPersonMovement : MonoBehaviour
             // delay
             
             transform.position = Vector3.MoveTowards(transform.position, spinningRoomPosition, Time.deltaTime * speed);
-            if ((transform.position - spinningRoomPosition).magnitude <= 0.01f)
+            
+            if (freelook.m_Heading.m_Bias > transform.eulerAngles.y)
             {
+                freelook.m_Heading.m_Bias -= 1.0f;
+            }
+            else
+            {
+                freelook.m_Heading.m_Bias += 1.0f;
+            }
+
+            if ((transform.position - spinningRoomPosition).magnitude <= 0.01f && Mathf.Abs(freelook.m_Heading.m_Bias - transform.eulerAngles.y) <= 1.0f)
+            {
+                freelook.m_Heading.m_Bias = transform.eulerAngles.y;
                 isSpinning = true;
             }
         }

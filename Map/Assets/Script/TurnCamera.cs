@@ -8,7 +8,8 @@ public class TurnCamera : MonoBehaviour
     public CharacterController controller;
     public CinemachineFreeLook freelook;
     public ThirdPersonMovement thirdPersonMovement;
-    private float rotating_speed = 2.0f;
+    public PressKeyOpenDoor pressKeyOpenDoor;
+    private float rotating_speed = 0.5f;
 
     private float spinningAngle = 0;
     private float spinAmount = 0.5f;
@@ -26,20 +27,20 @@ public class TurnCamera : MonoBehaviour
     {
         if (thirdPersonMovement.isSpinning)
         {
+            if (flag)
+            {
+                spinningAngle = transform.rotation.eulerAngles.y;
+                spinningAnglePre = spinningAngle;
+                flag = false;
+                Debug.Log("fuck");
+            }
             
-            // if (flag)
-            // {
-            //     spinningAngle = transform.rotation.eulerAngles.y;
-            //     spinningAnglePre = spinningAngle;
-            //     flag = false;
-            //     Debug.Log("fuck");
-            // }
-            
+
             
             freelook.m_Heading.m_Bias = spinningAngle;
             transform.rotation = Quaternion.Euler(0f, spinningAngle, 0f);
 
-            spinningAngle = spinningAngle + rotating_speed;
+            spinningAngle += rotating_speed;
 
 
 
@@ -52,17 +53,15 @@ public class TurnCamera : MonoBehaviour
 
 
 
-
-
-
-            if (spinningAngle >= 360 * spinAmount)
+            if (spinningAngle - spinningAnglePre >= 360 * spinAmount)
             {
                 controller.enabled = true;
                 // Debug.Log(spinningAngle);
-                spinningAngle = 0;
+                // spinningAngle = 0;
                 // Debug.Log(spinningAngle);
 
                 thirdPersonMovement.isSpinning = false;
+                
                 flag = true;
             }
         }
