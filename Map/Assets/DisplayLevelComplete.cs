@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class DisplayLevelComplete : MonoBehaviour
 {
-    public Transform player;
     public Text LevelCompleteText;
-    public GetHighGameManager gameManager;
-
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        LevelCompleteText.text = "";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
         if (gameManager.levelCompleted == true)
         {
-            LevelCompleteText.text = "GET HIGHHHHHH";
-            Debug.Log("text");
+            LevelCompleteText.text = "Level Complete";
+        }
+        else
+        {
+            LevelCompleteText.text = "";
         }
     }
 }

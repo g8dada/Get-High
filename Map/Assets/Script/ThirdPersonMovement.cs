@@ -11,11 +11,16 @@ public class ThirdPersonMovement : MonoBehaviour
     public CinemachineFreeLook freelook;
     public Transform cam;
 
+    public Rigidbody rb;
+    private bool lc = false;
+
+
+
     public float speed = 6.0f;
     public float turnSmoothTime = 0.2f;
     private float turnSmoothVelocity;
 
-    private Vector3 spinningRoomPosition = new Vector3 (10f, 0f, -50f);
+    private Vector3 spinningRoomPosition = new Vector3 (30f, 0f, 10f);
 
     public bool isSpinning = false;
 
@@ -32,6 +37,12 @@ public class ThirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (rb.position.x <= 32 && rb.position.x >=28 && rb.position.z <= 52 && rb.position.z >= 48 && lc == false)
+        {
+            FindObjectOfType<GameManager>().LevelComplete();
+            lc = true;
+        }
 
         if (direction.magnitude >= 0.1f && controller.enabled)
         {
