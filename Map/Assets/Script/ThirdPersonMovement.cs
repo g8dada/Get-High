@@ -20,6 +20,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turnSmoothTime = 0.2f;
     private float turnSmoothVelocity;
 
+
     private Vector3 spinningRoomPosition = new Vector3 (30f, 0f, 10f);
 
     public bool isSpinning = false;
@@ -52,28 +53,5 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-
-        if (!controller.enabled)
-        {
-            // delay
-            
-            transform.position = Vector3.MoveTowards(transform.position, spinningRoomPosition, Time.deltaTime * speed);
-            
-            if (freelook.m_Heading.m_Bias > transform.eulerAngles.y)
-            {
-                freelook.m_Heading.m_Bias -= 1.0f;
-            }
-            else
-            {
-                freelook.m_Heading.m_Bias += 1.0f;
-            }
-
-            if ((transform.position - spinningRoomPosition).magnitude <= 0.01f && Mathf.Abs(freelook.m_Heading.m_Bias - transform.eulerAngles.y) <= 1.0f)
-            {
-                freelook.m_Heading.m_Bias = transform.eulerAngles.y;
-                isSpinning = true;
-            }
-        }
-        
     }
 }

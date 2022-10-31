@@ -14,7 +14,7 @@ public class TurnCamera : MonoBehaviour
     private float spinningAngle = 0;
     private float spinAmount = 0.5f;
     private float spinningAnglePre = 0;
-    private bool flag = true;
+    public bool flag = true;
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +47,8 @@ public class TurnCamera : MonoBehaviour
 
 
 
-            Debug.Log(spinningAngle);
-            // Debug.Log(spinningAngle - spinningAnglePre);
+            // Debug.Log(spinningAngle);
+            Debug.Log(spinningAngle - spinningAnglePre);
             
 
 

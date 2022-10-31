@@ -5086,9 +5086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6181b14afd00144d8520f67a9e291a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1379857257}
-  LevelCompleteText: {fileID: 878899461}
-  gameManager: {fileID: 0}
 --- !u!114 &878899461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6310,8 +6307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c10f449ec6ce4f4592357e11819cb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1379857258}
-  getHighGameManager: {fileID: 0}
 --- !u!4 &1067530558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3433dbb6efda1f145acacdaff7b2e9e1, type: 3}
@@ -7050,6 +7045,7 @@ MonoBehaviour:
   freelook: {fileID: 1216689479}
   thirdPersonMovement: {fileID: 1379857259}
   pressKeyOpenDoor: {fileID: 0}
+  flag: 1
 --- !u!1001 &1218169394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7367,7 +7363,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313070386}
-  m_LocalRotation: {x: 0.11060919, y: -0.000000004275201, z: 4.7579596e-10, w: 0.993864}
+  m_LocalRotation: {x: 0.11060918, y: 0.000000004275201, z: -4.757959e-10, w: 0.993864}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7826,6 +7822,7 @@ MonoBehaviour:
   freelook: {fileID: 1216689479}
   thirdPersonMovement: {fileID: 1379857259}
   pressKeyOpenDoor: {fileID: 0}
+  flag: 1
 --- !u!114 &1379857269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7838,8 +7835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c10f449ec6ce4f4592357e11819cb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1379857258}
-  getHighGameManager: {fileID: 0}
 --- !u!54 &1379857270
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7849,13 +7844,30 @@ Rigidbody:
   m_GameObject: {fileID: 1379857253}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
+  m_Drag: 5
   m_AngularDrag: 10
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1379857271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379857253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038db9210466f49c5bca8f4dad026d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1379857258}
+  freelook: {fileID: 1216689479}
+  thirdPersonMovement: {fileID: 1379857259}
+  turnCamera: {fileID: 1216689481}
+  speed: 6
 --- !u!1 &1392009719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 895057390420591182, guid: 214b673e61a328f4b97a4c1f1bba63d3, type: 3}
@@ -14007,8 +14019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c10f449ec6ce4f4592357e11819cb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1379857258}
-  getHighGameManager: {fileID: 0}
 --- !u!65 &8807906473362136970
 BoxCollider:
   m_ObjectHideFlags: 0
