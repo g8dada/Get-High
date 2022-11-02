@@ -8,10 +8,8 @@ public class TurnCamera : MonoBehaviour
     public GameObject player;
     public CharacterController controller;
     public Camera camera;
-    // public CinemachineFreeLook freelook;
     public ThirdPersonMovement thirdPersonMovement;
     public PressKeyOpenDoor pressKeyOpenDoor;
-    private float rotating_speed = 0.5f;
 
     private float spinningAngle = 0;
     private float spinningAngleInRange;
@@ -35,14 +33,21 @@ public class TurnCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if(pressKeyOpenDoor.lockCinemachine == true)
+        // {
+        //     camera.GetComponent<CinemachineBrain>().enabled = false;
+        // }
+        
         if (thirdPersonMovement.isSpinning)
         { 
+            
             camera.GetComponent<CinemachineBrain>().enabled = false;
             
             if (angleEnd < 180) //angleEnd < 360
             {
                 if (flag)
                 {
+                    
                     angleInitial = transform.rotation.eulerAngles.y;
                     point = player.transform.position; //get target's coords
                     transform.LookAt(point); //makes the camera look to it
@@ -54,10 +59,32 @@ public class TurnCamera : MonoBehaviour
             }
             else
             {
+                thirdPersonMovement.isSpinning = false;
+                angleEnd = 0;
+                // pressKeyOpenDoor.lockCinemachine = false;
                 camera.GetComponent<CinemachineBrain>().enabled = true;
                 flag = true;
                 controller.enabled = true;
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

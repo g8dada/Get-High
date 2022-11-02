@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spinning Tag
   - Coke
+  - Spinning Tag 1
+  - Spinning Tag 2
   layers:
   - Default
   - TransparentFX

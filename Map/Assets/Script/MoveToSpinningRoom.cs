@@ -28,11 +28,12 @@ public class MoveToSpinningRoom : MonoBehaviour
         if(controller.enabled == false && turnCamera.flag == true)
         {
             // delay
-
+            controller.GetComponent<BoxCollider>().enabled = false;
             transform.position = Vector3.MoveTowards(transform.position, spinningRoomPosition, Time.deltaTime * speed);
 
             if ((transform.position - spinningRoomPosition).magnitude <= 0.01f)
             {
+                controller.GetComponent<BoxCollider>().enabled = true;
                 thirdPersonMovement.isSpinning = true;
             }
         }

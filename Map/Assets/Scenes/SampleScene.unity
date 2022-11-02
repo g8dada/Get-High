@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 281244378}
   - component: {fileID: 281244377}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door 2
   m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,11 +1579,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 371180875}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &305821000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2213,11 +2215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 390546247}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &383469299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2847,11 +2851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 310542563}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &464968723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3260,11 +3266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 1077175157}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &570013862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3510,7 +3518,7 @@ GameObject:
   - component: {fileID: 612365403}
   - component: {fileID: 612365404}
   m_Layer: 0
-  m_Name: DoorV1 (7)
+  m_Name: Door 4
   m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3532,7 +3540,7 @@ Transform:
   - {fileID: 1459885968}
   - {fileID: 2015794614}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &612365404
 Animator:
@@ -3938,12 +3946,12 @@ Transform:
   - {fileID: 1498853106}
   - {fileID: 1374035418}
   - {fileID: 91567593}
+  - {fileID: 804311437}
   - {fileID: 1667500000}
   - {fileID: 1194543879}
   - {fileID: 1417720210}
   - {fileID: 1545068391}
   - {fileID: 612365403}
-  - {fileID: 804311437}
   - {fileID: 1787815417}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -4194,7 +4202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749264902}
-  m_LocalRotation: {x: 0.074434124, y: 0.0000000042896624, z: -3.2018546e-10, w: 0.99722594}
+  m_LocalRotation: {x: 0.074434124, y: -0.0000000042896624, z: 3.2018546e-10, w: 0.99722594}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4334,7 +4342,7 @@ GameObject:
   - component: {fileID: 791730949}
   m_Layer: 0
   m_Name: TriggerDoorOpen
-  m_TagString: Untagged
+  m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4361,16 +4369,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791730947}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 281244376}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &791730950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4486,7 +4496,7 @@ GameObject:
   - component: {fileID: 804311437}
   - component: {fileID: 804311438}
   m_Layer: 0
-  m_Name: DoorV1 (8)
+  m_Name: Door O1
   m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4508,7 +4518,7 @@ Transform:
   - {fileID: 1556178972}
   - {fileID: 840708166}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 31
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &804311438
 Animator:
@@ -4760,9 +4770,10 @@ GameObject:
   - component: {fileID: 840708169}
   - component: {fileID: 840708168}
   - component: {fileID: 840708167}
+  - component: {fileID: 840708171}
   m_Layer: 0
   m_Name: TriggerDoorOpen
-  m_TagString: Untagged
+  m_TagString: Spinning Tag 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4789,16 +4800,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840708165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 1556178967}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &840708168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4862,6 +4875,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840708165}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &840708171
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840708165}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &843515893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4966,11 +4995,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 2064940015}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &862588981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6851,7 +6882,7 @@ Transform:
   - {fileID: 2004083461}
   - {fileID: 2037423422}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1194543880
 Animator:
@@ -7385,7 +7416,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313070386}
-  m_LocalRotation: {x: 0.11060919, y: -0.000000004275202, z: 4.75796e-10, w: 0.993864}
+  m_LocalRotation: {x: 0.11060918, y: 0.000000004275201, z: -4.757959e-10, w: 0.993864}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7797,36 +7828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1379857254}
---- !u!114 &1379857266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379857253}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1379857269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7886,6 +7887,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1379857258}
   turnCamera: {fileID: 963194230}
+--- !u!114 &1379857273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379857253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimeObject:
+  - {fileID: 1556178967}
+  - {fileID: 281244376}
+  controller: {fileID: 1379857258}
+  thirdPersonMovement: {fileID: 1379857259}
+  Action: 0
+  oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!1 &1392009719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 895057390420591182, guid: 214b673e61a328f4b97a4c1f1bba63d3, type: 3}
@@ -7951,11 +7973,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 2124842000}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &1395656468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8233,7 +8257,7 @@ Transform:
   - {fileID: 390546252}
   - {fileID: 383469297}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1417720211
 Animator:
@@ -8527,11 +8551,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 967488198}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &1536073137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8646,7 +8672,7 @@ Transform:
   - {fileID: 2124842005}
   - {fileID: 1395656466}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1545068392
 Animator:
@@ -8687,7 +8713,7 @@ GameObject:
   - component: {fileID: 1556178969}
   - component: {fileID: 1556178968}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door 1
   m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9366,7 +9392,7 @@ GameObject:
   - component: {fileID: 1667500000}
   - component: {fileID: 1667500001}
   m_Layer: 0
-  m_Name: DoorV1 (3)
+  m_Name: Door O2
   m_TagString: Spinning Tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9388,7 +9414,7 @@ Transform:
   - {fileID: 281244381}
   - {fileID: 791730948}
   m_Father: {fileID: 679608099}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1667500001
 Animator:
@@ -9695,11 +9721,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 23703080}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &1751433467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10523,11 +10551,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 2047043349}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &1958180767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10943,11 +10973,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 1459885963}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &2015794616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11145,11 +11177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 2004083456}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &2037423424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11480,11 +11514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a51c0643f8ef6f4cacf8750309c8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimeObject: {fileID: 630137100}
+  AnimeObject: []
   controller: {fileID: 1379857258}
   thirdPersonMovement: {fileID: 1379857259}
   Action: 0
   oddTimeOpenDoor: 0
+  lockCinemachine: 0
+  doorNumber: 0
 --- !u!65 &2050654778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13360,7 +13396,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -5033257388254679794, guid: db775df5574da428e88e2a2f2d4dda7a, type: 3}
 --- !u!23 &5257281660705248235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13853,7 +13889,7 @@ MeshCollider:
   m_GameObject: {fileID: 7957905940924877199}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -13879,7 +13915,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -5033257388254679794, guid: db775df5574da428e88e2a2f2d4dda7a, type: 3}
 --- !u!4 &8078502802865867157
 Transform:
   m_ObjectHideFlags: 0
