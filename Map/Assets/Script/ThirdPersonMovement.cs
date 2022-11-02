@@ -7,7 +7,6 @@ using Cinemachine;
 public class ThirdPersonMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public TurnCamera turnCamera;
     public CinemachineFreeLook freelook;
     public Transform cam;
 

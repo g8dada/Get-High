@@ -42,6 +42,7 @@ public class PressKeyOpenDoor : MonoBehaviour {
             if (oddTimeOpenDoor == false && AnimeObject.tag == "Spinning Tag")
             {
                 controller.enabled = false;
+                // camera.GetComponent<CinemachineBrain>().enabled = false;
             }
 
             oddTimeOpenDoor = !oddTimeOpenDoor;

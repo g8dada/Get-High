@@ -4194,7 +4194,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749264902}
-  m_LocalRotation: {x: 0.074434124, y: -0.0000000042896624, z: 3.2018546e-10, w: 0.99722594}
+  m_LocalRotation: {x: 0.074434124, y: 0.0000000042896624, z: -3.2018546e-10, w: 0.99722594}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5474,6 +5474,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5547,7 +5548,7 @@ Transform:
   - {fileID: 705507995}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.616, y: 10, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,6 +5583,25 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dae602ab133a4a59be6d205ed28312b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1379857253}
+  controller: {fileID: 1379857258}
+  camera: {fileID: 963194227}
+  thirdPersonMovement: {fileID: 1379857259}
+  pressKeyOpenDoor: {fileID: 0}
+  flag: 1
+  startSpinning: 0
 --- !u!1 &966597366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 895057390420591182, guid: 214b673e61a328f4b97a4c1f1bba63d3, type: 3}
@@ -6948,7 +6968,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 0.2
+    m_MaxSpeed: 0
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -7036,16 +7056,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216689477}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dae602ab133a4a59be6d205ed28312b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1379857258}
-  freelook: {fileID: 1216689479}
+  player: {fileID: 0}
+  controller: {fileID: 0}
+  camera: {fileID: 0}
   thirdPersonMovement: {fileID: 1379857259}
   pressKeyOpenDoor: {fileID: 0}
   flag: 1
+  startSpinning: 0
 --- !u!1001 &1218169394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7363,7 +7385,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313070386}
-  m_LocalRotation: {x: 0.11060918, y: 0.000000004275201, z: -4.757959e-10, w: 0.993864}
+  m_LocalRotation: {x: 0.11060919, y: -0.000000004275202, z: 4.75796e-10, w: 0.993864}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7689,7 +7711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1379857258}
-  turnCamera: {fileID: 1216689481}
   freelook: {fileID: 1216689479}
   cam: {fileID: 963194228}
   rb: {fileID: 1379857270}
@@ -7806,23 +7827,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1379857267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379857253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dae602ab133a4a59be6d205ed28312b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1379857258}
-  freelook: {fileID: 1216689479}
-  thirdPersonMovement: {fileID: 1379857259}
-  pressKeyOpenDoor: {fileID: 0}
-  flag: 1
 --- !u!114 &1379857269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7868,6 +7872,20 @@ MonoBehaviour:
   thirdPersonMovement: {fileID: 1379857259}
   turnCamera: {fileID: 1216689481}
   speed: 6
+--- !u!114 &1379857272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379857253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91df1fdd1f5684157a83aa4408b9e5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1379857258}
+  turnCamera: {fileID: 963194230}
 --- !u!1 &1392009719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 895057390420591182, guid: 214b673e61a328f4b97a4c1f1bba63d3, type: 3}
@@ -10116,7 +10134,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812731951}
-  m_LocalRotation: {x: 0.09251301, y: -0, z: -0, w: 0.9957115}
+  m_LocalRotation: {x: 0.09251301, y: -1e-45, z: -0, w: 0.9957115}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

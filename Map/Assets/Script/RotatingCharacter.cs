@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class RotatingCharacter : MonoBehaviour
 {
-    public GameObject player;
-    private float turnto = 0;
-    public float rotating_speed = 0.7f;
+    public CharacterController controller;
+    public TurnCamera turnCamera;
+    
+    private float speedMod = 10.0f; //a speed modifier
+    private Vector3 point; //the coord to the point where the camera looks at
+    private float angleEnd = 0f;
+    private bool flag = true;
+    private float angle_initial;
+
+
+    //private float angle = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -17,31 +25,20 @@ public class RotatingCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(waiter());
-    }
-
-    IEnumerator waiter()
-    {
-        yield return new WaitForSeconds(5.0f);
-
-        if (turnto < 360 * 6)
-        {
-            transform.rotation = Quaternion.Euler(0f, turnto, 0f);
-            turnto = turnto + rotating_speed;
-        }
-        yield return null;
-    
-
-        // yield return new WaitForSeconds(5.0f);
-    
-
-        // if (turnto > 0)
+        // if (turnCamera.startSpinning == true && angleEnd < 360)
         // {
-        //     transform.rotation = Quaternion.Euler(0f, turnto, 0f);
-        //     turnto = turnto - 0.5f;
+        //     if (flag)
+        //     {
+        //         angle_initial = transform.rotation.eulerAngles.y;
+        //         flag = false;
+        //     }
             
+        //     transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + angleEnd, 0f);
+            
+        //     angleEnd += 20 * Time.deltaTime * speedMod;
+        //     Debug.Log("hihihihihi");
+        //     //Vector3.forward * rotationAngle
         // }
-
-        // yield return null;
+        
     }
 }

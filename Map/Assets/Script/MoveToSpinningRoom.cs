@@ -30,46 +30,11 @@ public class MoveToSpinningRoom : MonoBehaviour
             // delay
 
             transform.position = Vector3.MoveTowards(transform.position, spinningRoomPosition, Time.deltaTime * speed);
-            
 
-            // float turnTime = 50f;
-            // Quaternion target = Quaternion.Euler(mainCamera.eulerAngles.x, mainCamera.eulerAngles.y, 0f);
-            // transform.rotation = Quaternion.RotateTowards(transform.rotation, target, turnTime * Time.deltaTime);
-            
-            
-
-            // float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            // transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            // Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            // controller.Move(moveDir.normalized * speed * Time.deltaTime);
-
-
-
-            if (freelook.m_Heading.m_Bias > transform.eulerAngles.y)
+            if ((transform.position - spinningRoomPosition).magnitude <= 0.01f)
             {
-                freelook.m_Heading.m_Bias -= 1.0f;
-            }
-            else
-            {
-                freelook.m_Heading.m_Bias += 1.0f;
-            }
-
-
-            if ((transform.position - spinningRoomPosition).magnitude <= 0.01f && Mathf.Abs(freelook.m_Heading.m_Bias - transform.eulerAngles.y) <= 1.0f)
-            {
-                freelook.m_Heading.m_Bias = transform.eulerAngles.y;
                 thirdPersonMovement.isSpinning = true;
             }
-
-
-
-
-            // if ((transform.position - spinningRoomPosition).magnitude <= 0.01f)
-            // {
-            //     freelook.m_Heading.m_Bias = transform.eulerAngles.y;
-            //     isSpinning = true;
-            // }
         }
     }
 }
